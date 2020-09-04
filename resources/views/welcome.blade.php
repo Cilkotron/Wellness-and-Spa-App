@@ -27,8 +27,6 @@
                 @endforeach
         </style>
 
-
-        <script type="text/javascript" src="{{ asset('frontend/js/jquery-1.11.2.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('frontend/js/jquery.flexslider.min.js') }}"></script>
         <script type="text/javascript">
             $(window).load(function() {
@@ -359,7 +357,7 @@
             </div>
         </footer>
 
-
+        <script type="text/javascript" src="{{ asset('frontend/js/jquery-1.11.2.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('frontend/js/bootstrap.min.js')}}"></script>
         <script type="text/javascript" src="{{ asset('frontend/js/owl.carousel.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('frontend/js/jquery.mixitup.min.js') }}" ></script>
