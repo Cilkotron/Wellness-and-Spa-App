@@ -26,41 +26,6 @@
                     }
                 @endforeach
         </style>
-
-        <script type="text/javascript" src="{{ asset('frontend/js/jquery.flexslider.min.js') }}"></script>
-        <script type="text/javascript">
-            $(window).load(function() {
-                $('.flexslider').flexslider({
-                 animation: "slide",
-                 controlsContainer: ".flexslider-container"
-                });
-            });
-        </script>
-
-        <script src="https://maps.googleapis.com/maps/api/js"></script>
-        <script>
-            function initialize() {
-                var mapCanvas = document.getElementById('map-canvas');
-                var mapOptions = {
-                    center: new google.maps.LatLng(43.32472, 21.90333),
-                    zoom: 16,
-                    scrollwheel: false,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                }
-                var map = new google.maps.Map(mapCanvas, mapOptions)
-
-                var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(43.32472, 21.90333),
-                    title:"Spa App"
-                });
-
-                // To add the marker to the map, call setMap();
-                marker.setMap(map);
-            }
-            google.maps.event.addDomListener(window, 'load', initialize);
-        </script>
-
-
     </head>
     <body data-spy="scroll" data-target="#template-navbar">
 
@@ -390,6 +355,39 @@
         </script>
 
         {!! Toastr::message() !!}
+
+        <script type="text/javascript" src="{{ asset('frontend/js/jquery.flexslider.min.js') }}"></script>
+        <script type="text/javascript">
+            $(window).load(function() {
+                $('.flexslider').flexslider({
+                 animation: "slide",
+                 controlsContainer: ".flexslider-container"
+                });
+            });
+        </script>
+
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script>
+            function initialize() {
+                var mapCanvas = document.getElementById('map-canvas');
+                var mapOptions = {
+                    center: new google.maps.LatLng(43.32472, 21.90333),
+                    zoom: 16,
+                    scrollwheel: false,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+                var map = new google.maps.Map(mapCanvas, mapOptions)
+
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(43.32472, 21.90333),
+                    title:"Spa App"
+                });
+
+                // To add the marker to the map, call setMap();
+                marker.setMap(map);
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
 
     </body>
 </html>
