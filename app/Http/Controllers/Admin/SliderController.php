@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
-
+use Illuminate\Support\Facades\File;
 
 class SliderController extends Controller
 {
@@ -115,7 +115,12 @@ class SliderController extends Controller
             if(!file_exists('uploads/slider')) {
                 mkdir('uploads/slider', 0777, true);
             }
-            unlink('uploads/slider/'.$slider->image);
+
+            $image_path = app_path('uploads/slider/'.$slider->image);
+            if(File::exists($image_path)) {
+                File::delete($image_path);
+
+            }
             $image->move('uploads/slider', $imagename);
         } else {
             $imagename = $slider->image;
