@@ -309,7 +309,7 @@
 
 
         <footer>
-            <div class="container-fluid">
+            <div class="container-fluid fixed-bottom">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
                         <div class="copyright text-center">
