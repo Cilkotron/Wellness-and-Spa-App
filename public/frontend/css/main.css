@@ -636,6 +636,9 @@ footer
 	background-color: #8BC34A;
 	color: #ffffff;
     padding: 30px 0px;
+    left: 0;
+    right: 0;
+    width: 100%;
 
 
 }
