@@ -30,7 +30,7 @@
     <body data-spy="scroll" data-target="#template-navbar">
 
         <!--== 4. Navigation ==-->
-        <nav id="template-navbar" class="navbar navbar-default custom-navbar-default navbar-fixed-top">
+        <nav id="template-navbar" class="navbar navbar-default custom-navbar-default navbar-fixed-top" style="margin-right:auto; margin-left:auto;">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
