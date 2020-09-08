@@ -51,7 +51,7 @@
 /*=================================================
 ||				2. Global
 ==================================================*/
-body
+html, body
 {
 	font-family: 'Raleway', 'Open-Sans', sans-serif;
 	overflow-x: hidden;
