@@ -222,9 +222,9 @@
                             <div class="col-md-4 col-sm-6 col-xs-12">
                                 <div class="opening-time">
                                     <h3 class="opening-time-title">Hours</h3>
-                                    <h5>Mon to Fri: <strong>09:00 - 21:00</strong> </h5>
-                                    <h5>Sat: <strong><span style="padding-left: 43px;">09:00 - 21:00</span></strong></h5>
-                                    <h5>Sun: <strong><span style="padding-left: 40px;">Closed</span></strong></h5>
+                                    <h5>Mon to Fri: <strong>09:00-21:00</strong> </h5>
+                                    <h5>Sat: <strong><span>09:00-21:00</span></strong></h5>
+                                    <h5>Sun: <strong><span>Closed</span></strong></h5>
                                 </div>
                             </div>
                         </div>
