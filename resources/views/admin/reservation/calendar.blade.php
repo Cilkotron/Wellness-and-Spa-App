@@ -34,7 +34,7 @@
                                     }">
                                     Confirm
                             </button>
-                            <button type="button" class="btn btn-primary btn-sm float-right" id="addEventButton">BOOk it</button>
+                            <button type="button" class="btn btn-primary btn-sm float-right addEventButton" >BOOk it</button>
                          </div>
                     </div>
             </div>
@@ -114,7 +114,7 @@
 
         };
 
-      $('#addEventButton').on('click', function(){
+      $('.addEventButton').on('click', function(){
         $( "#dialog" ).dialog({
             title:'Add Event'
         })

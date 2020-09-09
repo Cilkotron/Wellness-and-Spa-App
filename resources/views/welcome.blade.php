@@ -190,7 +190,7 @@
                                                 <input type="text" class="form-control reserve-form empty iconified" name="phone"  placeholder="  &#xf095;  Phone">
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" class="form-control reserve-form empty iconified" name="date_and_time" id="datetimepicker1"  placeholder="&#xf017;  Time">
+                                                <input type="text" autocomplete="off" class="form-control reserve-form empty iconified" name="date_and_time" id="datetimepicker1"  placeholder="&#xf017;  Time">
                                             </div>
                                         </div>
                                         <div class="col-md-12 col-sm-">
@@ -223,8 +223,8 @@
                                 <div class="opening-time">
                                     <h3 class="opening-time-title">Hours</h3>
                                     <h5>Mon to Fri: <strong>09:00-21:00</strong> </h5>
-                                    <h5>Sat: <strong><span>09:00-21:00</span></strong></h5>
-                                    <h5>Sun: <strong><span>Closed</span></strong></h5>
+                                    <h5>Sat: <strong style="padding-left: 45px;"><span>09:00-21:00</span></strong></h5>
+                                    <h5>Sun: <strong style="padding-left: 42px;"><span>Closed</span></strong></h5>
                                 </div>
                             </div>
                         </div>
