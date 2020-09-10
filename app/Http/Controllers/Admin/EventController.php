@@ -126,6 +126,7 @@ class EventController extends Controller
         if(isset($request->id)){
             $event = Event::findOrFail($request->id);
             $event->delete();
+            $event->refresh();
             return response()->json(['success' => 'Event successfully deleted']);
       }
 
