@@ -20,7 +20,6 @@ class SliderController extends Controller
     public function index()
     {
         $sliders = Slider::all();
-        // $url = Storage::disk('s3')->url('YOUR_FILENAME_HERE')
         return view('admin.slider.index', compact('sliders'));
     }
 
