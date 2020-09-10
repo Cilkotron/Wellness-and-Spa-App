@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
+use Brian2694\Toastr\Facades\Toastr;
 
 class SliderController extends Controller
 {
@@ -49,20 +50,19 @@ class SliderController extends Controller
 
 
          $image = $request->file('image');
-         $s3 = Storage::disk('s3');
-         $file_name = uniqid() .'.'. $image->getClientOriginalExtension();
-         $s3filePath = '/images/' . $file_name;
-         $s3->put($s3filePath, file_get_contents($image), 'public');
-         return $s3filePath;
-/*
+         $filename = $image->getClientOriginalName();
+         $filename = time(). '.' . $filename;
+         $path = $image->storeAs('public', $filename, 's3');
+
         $slider = new Slider();
         $slider->title = $request->title;
         $slider->sub_title = $request->sub_title;
-        $slider->image = $aws;
+        $slider->image = $filename;
         $slider->save();
 
-        return redirect()->route('slider.index')->with('successMsg', 'Slider Successefully Saved');
-*/
+        Toastr::success('Slider Successefully Saved!', 'Success', ["positionClass" =>"toast-top-right"]);
+        return redirect()->route('slider.index');
+
     }
 
     /**
