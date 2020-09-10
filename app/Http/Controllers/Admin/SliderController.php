@@ -20,6 +20,7 @@ class SliderController extends Controller
     public function index()
     {
         $sliders = Slider::all();
+        // $url = Storage::disk('s3')->url('YOUR_FILENAME_HERE')
         return view('admin.slider.index', compact('sliders'));
     }
 
@@ -58,7 +59,7 @@ class SliderController extends Controller
         $slider = new Slider();
         $slider->title = $request->title;
         $slider->sub_title = $request->sub_title;
-        $slider->image = $s3filePath;
+        $slider->image = $s3;
         $slider->save();
 
         return redirect()->route('slider.index')->with('successMsg', 'Slider Successefully Saved');
