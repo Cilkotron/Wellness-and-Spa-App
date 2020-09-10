@@ -51,18 +51,17 @@ class SliderController extends Controller
         if(isset($image)) {
             $currentData = Carbon::now()->toDateString();
             $imagename = $slug .'-'. $currentData .'-'. uniqid() .'-'. $image->getClientOriginalExtension();
-           /*
-            if(!file_exists('uploads/slider')) {
-                mkdir('uploads/slider', 0777, true);
+
+            if(!file_exists('images')) {
+                mkdir('images', 0777, true);
             }
-            */
             $image->store('images', 's3', $imagename);
         }
 
         $slider = new Slider();
         $slider->title = $request->title;
         $slider->sub_title = $request->sub_title;
-        $slider->image->imagename;
+        $slider->Storage::disk('s3')->url($image);
         $slider->save();
 
         return redirect()->route('slider.index')->with('successMsg', 'Slider Successefully Saved');
