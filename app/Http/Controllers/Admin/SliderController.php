@@ -8,7 +8,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\File;
-use Illuminate\Contracts\Filesystem\Filesystem;
+use Illuminate\Support\Facades\Storage;
+
 class SliderController extends Controller
 {
     /**
@@ -48,16 +49,16 @@ class SliderController extends Controller
 
 
          $image = $request->file('image');
-         $s3 = \Storage::disk('s3');
+         $s3 = Storage::disk('s3');
 
          $file_name = uniqid() .'.'. $image->getClientOriginalExtension();
-         $s3filePath = '/assets/' . $file_name;
+         $s3filePath = '/images/' . $file_name;
          $s3->put($s3filePath, file_get_contents($image), 'public');
 
         $slider = new Slider();
         $slider->title = $request->title;
         $slider->sub_title = $request->sub_title;
-        $slider->image = $s3;
+        $slider->image = $s3filePath;
         $slider->save();
 
         return redirect()->route('slider.index')->with('successMsg', 'Slider Successefully Saved');
