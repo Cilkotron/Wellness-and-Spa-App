@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\File;
-
+use Illuminate\Contracts\Filesystem\Filesystem;
 class SliderController extends Controller
 {
     /**
@@ -46,22 +46,18 @@ class SliderController extends Controller
             'image' => 'required|mimes:jpeg,bmp,png',
         ]);
 
-        $image = $request->file('image');
-        $slug = Str::slug($request->title);
-        if(isset($image)) {
-            $currentData = Carbon::now()->toDateString();
-            $imagename = $slug .'-'. $currentData .'-'. uniqid() .'-'. $image->getClientOriginalExtension();
 
-            if(!file_exists('images')) {
-                mkdir('images', 0777, true);
-            }
-            $image->store('images', 's3', $imagename);
-        }
+         $image = $request->file('image');
+         $s3 = \Storage::disk('s3');
+
+         $file_name = uniqid() .'.'. $image->getClientOriginalExtension();
+         $s3filePath = '/assets/' . $file_name;
+         $s3->put($s3filePath, file_get_contents($image), 'public');
 
         $slider = new Slider();
         $slider->title = $request->title;
         $slider->sub_title = $request->sub_title;
-        $slider->Storage::disk('s3')->url($image);
+        $slider->image = $s3;
         $slider->save();
 
         return redirect()->route('slider.index')->with('successMsg', 'Slider Successefully Saved');
