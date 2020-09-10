@@ -53,7 +53,8 @@ class SliderController extends Controller
          $file_name = uniqid() .'.'. $image->getClientOriginalExtension();
          $s3filePath = '/images/' . $file_name;
          $aws= $s3->put($s3filePath, file_get_contents($image), 'public');
-
+         return $aws;
+/*
         $slider = new Slider();
         $slider->title = $request->title;
         $slider->sub_title = $request->sub_title;
@@ -61,7 +62,7 @@ class SliderController extends Controller
         $slider->save();
 
         return redirect()->route('slider.index')->with('successMsg', 'Slider Successefully Saved');
-
+*/
     }
 
     /**
