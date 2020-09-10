@@ -56,7 +56,7 @@ class SliderController extends Controller
                 mkdir('uploads/slider', 0777, true);
             }
             */
-            $image->store('images', 's3'. $imagename);
+            $image->store('images', 's3', $imagename);
         }
 
         $slider = new Slider();
