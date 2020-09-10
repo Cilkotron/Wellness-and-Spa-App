@@ -4,7 +4,7 @@ return [
 
     'driver' => env('MAIL_DRIVER', 'smtp'),
 
-    'host' => env('MAIL_HOST', 'smtp.mailtrap.io'),
+    'host' => env('MAIL_HOST', 'mailtrap.io'),
 
     'port' => env('MAIL_PORT', 2525),
 
