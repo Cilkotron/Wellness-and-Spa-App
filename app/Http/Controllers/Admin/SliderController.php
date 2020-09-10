@@ -52,12 +52,12 @@ class SliderController extends Controller
          $s3 = Storage::disk('s3');
          $file_name = uniqid() .'.'. $image->getClientOriginalExtension();
          $s3filePath = '/images/' . $file_name;
-         $s3->put($s3filePath, file_get_contents($image), 'public');
+         $aws= $s3->put($s3filePath, file_get_contents($image), 'public');
 
         $slider = new Slider();
         $slider->title = $request->title;
         $slider->sub_title = $request->sub_title;
-        $slider->image = $s3;
+        $slider->image = $aws;
         $slider->save();
 
         return redirect()->route('slider.index')->with('successMsg', 'Slider Successefully Saved');
