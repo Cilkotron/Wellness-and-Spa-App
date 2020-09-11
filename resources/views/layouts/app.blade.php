@@ -8,7 +8,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title')</title>
-    <link rel="shortcut icon" href="{{ asset('frontend/images/loading.gif') }}" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('admin/img/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('admin/img/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('admin/img/favicon-16x16.png') }}">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <link rel="stylesheet"  type="text/css" href="{{ asset('admin/css/material-dashboard.css?v=2.1.2') }}" rel="stylesheet" />
     <link rel="stylesheet"  type="text/css" href="{{ asset('admin/demo/demo.css') }}" rel="stylesheet" />
