@@ -47,8 +47,8 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <a href="{{ route('slider.index') }}" class="btn btn-danger pull-right">Back</a>
                                 <button class="btn btn-primary pull-right mr-3" type="submit">Save</button>
+                                <a href="{{ route('slider.index') }}" class="btn btn-danger pull-right">Back</a>
                             </div>
                         </div>
 

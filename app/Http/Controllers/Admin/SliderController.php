@@ -105,29 +105,18 @@ class SliderController extends Controller
             'image' => 'required|mimes:jpeg,bmp,png'
         ]);
 
-        $image = $request->file('image');
-        $slug = Str::slug($request->title);
+
         $slider = Slider::find($id);
-        if(isset($image)) {
-            $currentData = Carbon::now()->toDateString();
-            $imagename = $slug .'-'. $currentData .'-'. uniqid() .'-'. $image->getClientOriginalExtension();
-            if(!file_exists('uploads/slider')) {
-                mkdir('uploads/slider', 0777, true);
-            }
-
-            $image_path = app_path('uploads/slider/'.$slider->image);
-            if(File::exists($image_path)) {
-                File::delete($image_path);
-
-            }
-            $image->move('uploads/slider', $imagename);
-        } else {
-            $imagename = $slider->image;
-        }
+        $image = $request->file('image');
+        $filename = $image->getClientOriginalName();
+        $filename = time(). '.' . $filename;
+        $path =  'upload/'.$filename;
+        $storage = Storage::disk('s3');
+        $storage->put($path, fopen($image,  'r+'), 'public');
 
         $slider->title = $request->title;
         $slider->sub_title = $request->sub_title;
-        $slider->image = $imagename;
+        $slider->image = $path;
         $slider->save();
 
         return redirect()->route('slider.index')->with('successMsg', 'Slider Successefully Updated ');
@@ -146,6 +135,7 @@ class SliderController extends Controller
             unlink('uploads/slider/' .$slider->image);
         }
         $slider->delete();
-        return redirect()->back()->with('successMsg', 'Slider Successfully Deleted!');
+        Toastr::success('Slider Successefully Deleted!', 'Success', ["positionClass" =>"toast-top-right"]);
+        return redirect()->back();
     }
 }
