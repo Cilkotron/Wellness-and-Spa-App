@@ -9,6 +9,8 @@ use App\Category;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
+use Brian2694\Toastr\Facades\Toastr;
 
 class ServiceController extends Controller
 {
@@ -51,27 +53,22 @@ class ServiceController extends Controller
             'image' => 'required|mimes:jpeg,bmp,png',
         ]);
         $image = $request->file('image');
-        $slug = Str::slug($request->name);
-        if(isset($image)) {
-            $currentData = Carbon::now()->toDateString();
-            $imagename = $slug .'-'. $currentData .'-'. uniqid() .'-'. $image->getClientOriginalExtension();
-            if(!file_exists('uploads/service')) {
-                mkdir('uploads/service', 0777, true);
-            }
-            $image->move('uploads/service', $imagename);
-        } else {
-            $imagename = 'service.png';
-        }
+         $filename = $image->getClientOriginalName();
+         $filename = time(). '.' . $filename;
+         $path =  'upload/service/'.$filename;
+         $storage = Storage::disk('s3');
+         $storage->put($path, fopen($image,  'r+'), 'public');
 
         $service = new Service();
         $service->category_id = $request->category_id;
         $service->name = $request->name;
         $service->description = $request->description;
         $service->price = $request->price;
-        $service->image = $imagename;
+        $service->image = $path;
         $service->save();
 
-        return redirect()->route('service.index')->with('successMsg', 'Service Successefully Added');
+        Toastr::success('Service Successefully Saved!', 'Success', ["positionClass" =>"toast-top-right"]);
+        return redirect()->route('service.index');
     }
 
     /**
@@ -115,32 +112,21 @@ class ServiceController extends Controller
             'image' => 'required|mimes:jpeg,bmp,png'
         ]);
 
-        $image = $request->file('image');
-        $slug = Str::slug($request->name);
         $service = Service::find($id);
-        if(isset($image)) {
-            $currentData = Carbon::now()->toDateString();
-            $imagename = $slug .'-'. $currentData .'-'. uniqid() .'-'. $image->getClientOriginalExtension();
-            if(!file_exists('uploads/service')) {
-                mkdir('uploads/service', 0777, true);
-            }
-            $image_path = app_path('uploads/service/'.$service->image);
-            if(File::exists($image_path)) {
-                File::delete($image_path);
-
-            }
-            $image->move('uploads/service', $imagename);
-        } else {
-            $imagename = $service->image;
-        }
+        $image = $request->file('image');
+        $filename = $image->getClientOriginalName();
+        $filename = time(). '.' . $filename;
+        $path =  'upload/service/'.$filename;
+        $storage = Storage::disk('s3');
+        $storage->put($path, fopen($image,  'r+'), 'public');
 
         $service->category_id = $request->category_id;
         $service->name = $request->name;
         $service->description = $request->description;
         $service->price = $request->price;
-        $service->image = $imagename;
+        $service->image = $path;
         $service->save();
-
+        Toastr::success('Slider Successefully Updated!', 'Success', ["positionClass" =>"toast-top-right"]);
         return redirect()->route('service.index')->with('successMsg', 'Service Successefully Updated ');
     }
 
@@ -153,10 +139,8 @@ class ServiceController extends Controller
     public function destroy($id)
     {
         $service = Service::find($id);
-        if(file_exists('uploads/service/' .$service->image)) {
-            unlink('uploads/service/' .$service->image);
-        }
         $service->delete();
-        return redirect()->back()->with('successMsg', 'Service Successfully Deleted!');
+        Toastr::success('Slider Successefully Deleted!', 'Success', ["positionClass" =>"toast-top-right"]);
+        return redirect()->back();;
     }
 }

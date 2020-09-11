@@ -52,7 +52,7 @@ class SliderController extends Controller
          $image = $request->file('image');
          $filename = $image->getClientOriginalName();
          $filename = time(). '.' . $filename;
-         $path =  'upload/'.$filename;
+         $path =  'upload/slider/'.$filename;
          $storage = Storage::disk('s3');
          $storage->put($path, fopen($image,  'r+'), 'public');
 
@@ -108,7 +108,7 @@ class SliderController extends Controller
         $image = $request->file('image');
         $filename = $image->getClientOriginalName();
         $filename = time(). '.' . $filename;
-        $path =  'upload/'.$filename;
+        $path =  'upload/slider/'.$filename;
         $storage = Storage::disk('s3');
         $storage->put($path, fopen($image,  'r+'), 'public');
 
