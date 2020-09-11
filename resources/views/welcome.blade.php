@@ -27,7 +27,7 @@
         </style>
     </head>
     <body data-spy="scroll" data-target="#template-navbar">
-    <img src="{{ Storage::disk('s3')->url($slider->image)  }}"" alt="">
+    <img src="{{ Storage::disk('s3')->url($slider->image)}}" alt="">
 
         <!--== 4. Navigation ==-->
         <nav id="template-navbar" class="navbar navbar-default custom-navbar-default navbar-fixed-top" style="margin-right:auto; margin-left:auto;">

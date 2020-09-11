@@ -54,7 +54,7 @@ class SliderController extends Controller
          $filename = time(). '.' . $filename;
          $path =  'upload/'.$filename;
          $storage = Storage::disk('s3');
-         $storage->input($path, fopen($image,  'r+'), 'public');
+         $storage->put($path, fopen($image,  'r+'), 'public');
 
         $slider = new Slider();
         $slider->title = $request->title;
