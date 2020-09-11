@@ -39,7 +39,7 @@
                         <tr>
                             <td>{{ $key + 1}}</td>
                             <td class="text-truncate" style="max-width: 100px;">{{ $service->name  }}</td>
-                            <td><img class="img-responsive img-thumbnail" src="{{ asset('uploads/service/' .$service->image )}}" style="height: 100px; width: 100px;" alt=""></td>
+                            <td><img class="img-responsive img-thumbnail" src="{{ Storage::disk('s3')->url($service->image)}}" style="height: 100px; width: 100px;" alt=""></td>
                             <td class="text-truncate" style="max-width: 100px;">{{ $service->category->name }}</td>
                             <td class="text-truncate" style="max-width: 100px;">{{ $service->description }}</td>
                             <td>{{ $service->price }}</td>
