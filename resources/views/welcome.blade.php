@@ -20,7 +20,7 @@
                 @foreach($sliders as $key=>$slider)
                     .owl-carousel .owl-wrapper, .owl-carousel .owl-item:nth-child({{ $key + 1 }}) .item
                     {
-                        background: {{ Storage::disk('s3')->url($slider->image)}};
+                        background: url({{ Storage::disk('s3')->url($slider->image)}});
                         background-size: cover;
                     }
                 @endforeach
