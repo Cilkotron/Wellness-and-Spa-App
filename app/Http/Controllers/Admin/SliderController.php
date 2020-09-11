@@ -104,8 +104,6 @@ class SliderController extends Controller
             'sub_title' => 'required',
             'image' => 'required|mimes:jpeg,bmp,png'
         ]);
-
-
         $slider = Slider::find($id);
         $image = $request->file('image');
         $filename = $image->getClientOriginalName();
@@ -118,8 +116,8 @@ class SliderController extends Controller
         $slider->sub_title = $request->sub_title;
         $slider->image = $path;
         $slider->save();
-
-        return redirect()->route('slider.index')->with('successMsg', 'Slider Successefully Updated ');
+        Toastr::success('Slider Successefully Updated!', 'Success', ["positionClass" =>"toast-top-right"]);
+        return redirect()->route('slider.index');
     }
 
     /**
@@ -131,9 +129,6 @@ class SliderController extends Controller
     public function destroy($id)
     {
         $slider = Slider::find($id);
-        if(file_exists('uploads/slider/' .$slider->image)) {
-            unlink('uploads/slider/' .$slider->image);
-        }
         $slider->delete();
         Toastr::success('Slider Successefully Deleted!', 'Success', ["positionClass" =>"toast-top-right"]);
         return redirect()->back();
