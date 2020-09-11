@@ -52,11 +52,11 @@ class SliderController extends Controller
          $image = $request->file('image');
          $filename = $image->getClientOriginalName();
          $filename = time(). '.' . $filename;
-         $path = $image->storeAs('public', $filename, 's3');
-
+         $path =  'upload/'.$filename;
+         $storage = Storage::disk('s3');
+         $storage->input($path, fopen($image,  'r+'), 'public');
 
         $slider = new Slider();
-        // Storage::disk('s3')->response('public/' . $slider->image);
         $slider->title = $request->title;
         $slider->sub_title = $request->sub_title;
         $slider->image = $path;
