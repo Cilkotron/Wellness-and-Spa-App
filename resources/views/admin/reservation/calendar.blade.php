@@ -173,6 +173,7 @@
                         "id": id,
                         },
                     success: function(res) {
+                        location.reload();
                         toastr.success(res.success, 'Success!');
                     }
                 });

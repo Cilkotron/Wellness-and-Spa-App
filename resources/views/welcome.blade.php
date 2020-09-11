@@ -33,9 +33,7 @@
         </style>
     </head>
     <body data-spy="scroll" data-target="#template-navbar">
-        <div class="spinner-grow text-success" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+
 
         <!--== 4. Navigation ==-->
         <nav id="template-navbar" class="navbar navbar-default custom-navbar-default navbar-fixed-top" style="margin-right:auto; margin-left:auto;">
