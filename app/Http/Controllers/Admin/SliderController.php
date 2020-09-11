@@ -57,12 +57,10 @@ class SliderController extends Controller
         $slider = new Slider();
         $slider->title = $request->title;
         $slider->sub_title = $request->sub_title;
-        $slider->image = $path;
+        $slider->image = $filename;
         $slider->save();
-
         Toastr::success('Slider Successefully Saved!', 'Success', ["positionClass" =>"toast-top-right"]);
-        return redirect()->route('slider.index');
-
+        return Storage::disk('s3')->response('public/' . $slider->image);
 
     }
 
