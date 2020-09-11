@@ -20,14 +20,13 @@
                 @foreach($sliders as $key=>$slider)
                     .owl-carousel .owl-wrapper, .owl-carousel .owl-item:nth-child({{ $key + 1 }}) .item
                     {
-                        background: url({{ $slider->image }});
+                        background: {{ Storage::disk('s3')->url($slider->image)}};
                         background-size: cover;
                     }
                 @endforeach
         </style>
     </head>
     <body data-spy="scroll" data-target="#template-navbar">
-    <img src="{{ Storage::disk('s3')->url($slider->image)}}" alt="">
 
         <!--== 4. Navigation ==-->
         <nav id="template-navbar" class="navbar navbar-default custom-navbar-default navbar-fixed-top" style="margin-right:auto; margin-left:auto;">
