@@ -63,7 +63,7 @@ class SliderController extends Controller
         $slider->save();
 
         Toastr::success('Slider Successefully Saved!', 'Success', ["positionClass" =>"toast-top-right"]);
-        return view('admin.slider.index');
+        return redirect()->route('slider.index');
 
     }
 
