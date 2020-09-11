@@ -128,7 +128,7 @@
                                 @foreach($services as $service)
                                     <li class="item" id="{{ $service->category->slug }}">
                                         <a href="#">
-                                            <img src="{{ asset('uploads/service/'.$service->image) }}" class="img-responsive" alt="Service" style="height: 300px; width: 369px;" >
+                                            <img src="{{ Storage::disk('s3')->url($slider->image)}}" class="img-responsive" alt="Service" style="height: 300px; width: 369px;" >
                                             <div class="menu-desc text-center">
                                                     <span>
                                                         <h3>{{ $service->name }}</h3>
