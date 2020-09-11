@@ -6,7 +6,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
         <title>Spa App</title>
-       <link rel="shortcut icon" href="{{ asset('frontend/images/loading.gif') }}" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('frontend/images/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('frontend/images/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('frontend/images/favicon-16x16.png') }}">
+        <link rel="manifest" href="/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
         <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('frontend/css/font-awesome.min.css') }}">
         <link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.css') }}">
