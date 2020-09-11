@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Category;
 use Illuminate\Support\Str;
+use Brian2694\Toastr\Facades\Toastr;
 
 class CategoryController extends Controller
 {
@@ -47,8 +48,8 @@ class CategoryController extends Controller
         $category->name = $request->name;
         $category->slug = Str::slug( $request->name);
         $category->save();
-
-        return redirect()->route('category.index')->with('successMsg', 'Category Successefully Saved');
+        Toastr::success('Category Successefully Saved!', 'Success', ["positionClass" =>"toast-top-right"]);
+        return redirect()->route('category.index');
 
     }
 
@@ -92,8 +93,8 @@ class CategoryController extends Controller
         $category->name = $request->name;
         $category->slug = Str::slug($request->name);
         $category->save();
-
-        return redirect()->route('category.index')->with('successMsg', 'Category Successefully Updated ');
+        Toastr::success('Category Successefully Updated!', 'Success', ["positionClass" =>"toast-top-right"]);
+        return redirect()->route('category.index');
     }
 
     /**
@@ -105,7 +106,8 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         Category::find($id)->delete();
-        return redirect()->back()->with('successMsg', 'Category Successfully Deleted!');
+        Toastr::success('Category Successefully Deleted!', 'Success', ["positionClass" =>"toast-top-right"]);
+        return redirect()->back();
 
     }
 }

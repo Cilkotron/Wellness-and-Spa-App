@@ -126,7 +126,7 @@ class ServiceController extends Controller
         $service->price = $request->price;
         $service->image = $path;
         $service->save();
-        Toastr::success('Slider Successefully Updated!', 'Success', ["positionClass" =>"toast-top-right"]);
+        Toastr::success('Service Successefully Updated!', 'Success', ["positionClass" =>"toast-top-right"]);
         return redirect()->route('service.index')->with('successMsg', 'Service Successefully Updated ');
     }
 
@@ -140,7 +140,7 @@ class ServiceController extends Controller
     {
         $service = Service::find($id);
         $service->delete();
-        Toastr::success('Slider Successefully Deleted!', 'Success', ["positionClass" =>"toast-top-right"]);
+        Toastr::success('Service Successefully Deleted!', 'Success', ["positionClass" =>"toast-top-right"]);
         return redirect()->back();;
     }
 }
