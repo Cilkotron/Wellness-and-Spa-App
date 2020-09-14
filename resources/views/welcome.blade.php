@@ -30,13 +30,24 @@
                         background-size: cover;
                         @media only screen and (max-width: 320px) {
 
-                    }
-                    @media only screen and (min-width: 1200px) {
-                        /* styles for wide screens */
-                    }
-                    @media only screen and (min-width: 1440px) {
-                        /* styles for MacBook Pro-sized screens and larger */
-                    }
+                        }
+                        @media only screen and (min-width: 1200px) {
+                            /* styles for wide screens */
+                        }
+                        @media only screen and (min-width: 1440px) {
+                            /* styles for MacBook Pro-sized screens and larger */
+                        }
+                        @media
+                        only screen and (-webkit-min-device-pixel-ratio: 2),
+                        only screen and (min--moz-device-pixel-ratio: 2),
+                        only screen and (-moz-min-device-pixel-ratio: 2),
+                        only screen and (-o-min-device-pixel-ratio: 2/1),
+                        only screen and (min-device-pixel-ratio: 2),
+                        only screen and (min-resolution: 192dpi),
+                        only screen and (min-resolution: 2dppx) {
+                            /* styles for Retina-type displays */
+                        }
+
                 @endforeach
         </style>
     </head>
