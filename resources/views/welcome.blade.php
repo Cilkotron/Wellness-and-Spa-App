@@ -28,6 +28,14 @@
                     {
                         background: url({{ Storage::disk('s3')->url($slider->image)}});
                         background-size: cover;
+                        @media only screen and (max-width: 320px) {
+
+                    }
+                    @media only screen and (min-width: 1200px) {
+                        /* styles for wide screens */
+                    }
+                    @media only screen and (min-width: 1440px) {
+                        /* styles for MacBook Pro-sized screens and larger */
                     }
                 @endforeach
         </style>
