@@ -22,7 +22,7 @@
                 <div class="card-body">
                   <div class="table-responsive">
                     <table class="table table-striped table-bordered"  id="table" style="width:100%">
-                      <thead class=" text-primary">
+                      <thead class="text-primary">
                         <th>ID</th>
                         <th>Name</th>
                         <th>Slug</th>
