@@ -13,14 +13,14 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
         <link rel="stylesheet" href="{{ secure_asset('frontend/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/css/font-awesome.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.css') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/css/owl.theme.css') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/css/animate.css') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/css/flexslider.css') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/css/pricing.css') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/css/main.css') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap-datetimepicker.min.css') }}">
+        <link rel="stylesheet" href="{{ secure_asset('frontend/css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ secure_asset('frontend/css/owl.carousel.css') }}">
+        <link rel="stylesheet" href="{{ secure_asset('frontend/css/owl.theme.css') }}">
+        <link rel="stylesheet" href="{{ secure_asset('frontend/css/animate.css') }}">
+        <link rel="stylesheet" href="{{ secure_asset('frontend/css/flexslider.css') }}">
+        <link rel="stylesheet" href="{{ secure_asset('frontend/css/pricing.css') }}">
+        <link rel="stylesheet" href="{{ secure_asset('frontend/css/main.css') }}">
+        <link rel="stylesheet" href="{{ secure_asset('frontend/css/bootstrap-datetimepicker.min.css') }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
         <style>
                 @foreach($sliders as $key=>$slider)
@@ -347,16 +347,16 @@
             </div>
         </footer>
 
-        <script type="text/javascript" src="{{ asset('frontend/js/jquery-1.11.2.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('frontend/js/bootstrap.min.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('frontend/js/owl.carousel.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('frontend/js/jquery.mixitup.min.js') }}" ></script>
-        <script type="text/javascript" src="{{ asset('frontend/js/wow.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('frontend/js/jquery.validate.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('frontend/js/jquery.hoverdir.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('frontend/js/jQuery.scrollSpeed.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('frontend/js/script.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('frontend/js/bootstrap-datetimepicker.min.js') }}"></script>
+        <script type="text/javascript" src="{{ secure_asset('frontend/js/jquery-1.11.2.min.js') }}"></script>
+        <script type="text/javascript" src="{{ secure_asset('frontend/js/bootstrap.min.js')}}"></script>
+        <script type="text/javascript" src="{{ secure_asset('frontend/js/owl.carousel.min.js') }}"></script>
+        <script type="text/javascript" src="{{ secure_asset('frontend/js/jquery.mixitup.min.js') }}" ></script>
+        <script type="text/javascript" src="{{ secure_asset('frontend/js/wow.min.js') }}"></script>
+        <script type="text/javascript" src="{{ secure_asset('frontend/js/jquery.validate.js') }}"></script>
+        <script type="text/javascript" src="{{ secure_asset('frontend/js/jquery.hoverdir.js') }}"></script>
+        <script type="text/javascript" src="{{ secure_asset('frontend/js/jQuery.scrollSpeed.js') }}"></script>
+        <script type="text/javascript" src="{{ secure_asset('frontend/js/script.js') }}"></script>
+        <script type="text/javascript" src="{{ secure_asset('frontend/js/bootstrap-datetimepicker.min.js') }}"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
         @if($errors->any())
             @foreach ($errors->all() as $error)
@@ -381,7 +381,7 @@
 
         {!! Toastr::message() !!}
 
-        <script type="text/javascript" src="{{ asset('frontend/js/jquery.flexslider.min.js') }}"></script>
+        <script type="text/javascript" src="{{ secure_asset('frontend/js/jquery.flexslider.min.js') }}"></script>
         <script type="text/javascript">
             $(window).load(function() {
                 $('.flexslider').flexslider({
