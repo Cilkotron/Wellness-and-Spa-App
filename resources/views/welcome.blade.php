@@ -99,7 +99,7 @@
 
         <!--== 6. About us ==-->
         <section id="about" class="about">
-            <img src="{{  asset('frontend/images/icons/about_color.png') }}" class="img-responsive section-icon hidden-sm hidden-xs">
+            <img src="{{  secure_asset('frontend/images/icons/about_color.png') }}" class="img-responsive section-icon hidden-sm hidden-xs">
             <div class="wrapper">
                 <div class="container-fluid">
                     <div class="row dis-table">
@@ -175,7 +175,7 @@
 
         <!--== 15. Reserve A Tretment! ==-->
         <section id="reserve" class="reserve">
-            <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{ asset('frontend/images/icons/reserve_black.png')}}">
+            <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{ secure_asset('frontend/images/icons/reserve_black.png')}}">
             <div class="wrapper">
                 <div class="container-fluid">
                     <div class="row dis-table justify-content-center">
@@ -193,7 +193,7 @@
 
 
         <section class="reservation">
-            <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{ asset('frontend/images/icons/reserve_color.png')}}">
+            <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{ secure_asset('frontend/images/icons/reserve_color.png')}}">
             <div class="wrapper">
                 <div class="container-fluid">
                     <div class="section-content">
