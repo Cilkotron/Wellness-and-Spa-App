@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="{{ secure_asset('frontend/css/pricing.css') }}">
         <link rel="stylesheet" href="{{ secure_asset('frontend/css/main.css') }}">
         <link rel="stylesheet" href="{{ secure_asset('frontend/css/bootstrap-datetimepicker.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
         <style>
                 @foreach($sliders as $key=>$slider)

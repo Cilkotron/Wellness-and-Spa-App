@@ -11,12 +11,11 @@
     <link rel="apple-touch-icon" sizes="144x144" href="{{ secure_asset('admin/img/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ secure_asset('admin/img/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ secure_asset('admin/img/favicon-16x16.png') }}">
-    <link rel="manifest" href="/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-    <link rel="stylesheet"  type="text/css" href="{{ secure_asset('admin/css/material-dashboard.css?v=2.1.2') }}" rel="stylesheet" />
-    <link rel="stylesheet"  type="text/css" href="{{ secure_asset('admin/demo/demo.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset('admin/css/material-dashboard.css?v=2.1.2') }}" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset('admin/demo/demo.css') }}" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
@@ -68,7 +67,7 @@
   <script type="text/javascript" src="{{ secure_asset('admin/js/material-dashboard.js?v=2.1.2') }}" ></script>
   <script type="text/javascript" src="{{ secure_asset('admin/js/material-dashboard.js.map') }}" ></script>
   <script type="text/javascript" src="{{ secure_asset('admin/demo/demo.js') }}"></script>
-  <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script>
