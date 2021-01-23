@@ -66,7 +66,7 @@
   <script type="text/javascript" src="{{ secure_asset('admin/js/plugins/bootstrap-notify.js') }}"></script>
   <script type="text/javascript" src="{{ secure_asset('admin/js/material-dashboard.js?v=2.1.2') }}" ></script>
   <script type="text/javascript" src="{{ secure_asset('admin/demo/demo.js') }}"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></sc>
 
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script>
