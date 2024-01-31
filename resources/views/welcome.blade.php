@@ -320,7 +320,7 @@
         </footer>
 
         <script type="text/javascript" src="frontend/js/jquery-1.11.2.min.js"></script>
-        <script type="text/javascript" src="frontend/js/bootstrap.min.js')}}"></script>
+        <script type="text/javascript" src="frontend/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="frontend/js/owl.carousel.min.js"></script>
         <script type="text/javascript" src="frontend/js/jquery.mixitup.min.js" ></script>
         <script type="text/javascript" src="frontend/js/wow.min.js"></script>
@@ -363,7 +363,7 @@
             });
         </script>
 
-        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key="></script>
         <script>
             function initialize() {
                 var mapCanvas = document.getElementById('map-canvas');
