@@ -8,15 +8,14 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title')</title>
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('admin/img/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('admin/img/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('admin/img/favicon-16x16.png') }}">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('public/admin/img/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('public/admin/img/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('public/admin/img/favicon-16x16.png') }}">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-    <link rel="stylesheet"  type="text/css" href="{{ asset('admin/css/material-dashboard.css?v=2.1.2') }}" rel="stylesheet" />
-    <link rel="stylesheet"  type="text/css" href="{{ asset('admin/demo/demo.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/admin/css/material-dashboard.css?v=2.1.2') }}" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/admin/demo/demo.css') }}" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
@@ -45,30 +44,29 @@
     </div>
 
 
-  <script type="text/javascript" src="{{ asset('admin/js/core/jquery.min.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('admin/js/core/popper.min.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('admin/js/core/bootstrap-material-design.min.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('admin/js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('admin/js/plugins/moment.min.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('admin/js/plugins/sweetalert2.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('admin/js/plugins/jquery.validate.min.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('admin/js/plugins/jquery.bootstrap-wizard.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('admin/js/plugins/bootstrap-selectpicker.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('admin/js/plugins/bootstrap-datetimepicker.min.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('admin/js/plugins/jquery.dataTables.min.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('admin/js/plugins/bootstrap-tagsinput.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('admin/js/plugins/jasny-bootstrap.min.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('admin/js/plugins/fullcalendar.min.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('admin/js/plugins/jquery-jvectormap.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('admin/js/plugins/nouislider.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('public/admin/js/core/jquery.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('public/admin/js/core/popper.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('public/admin/js/core/bootstrap-material-design.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('public/admin/js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('public/admin/js/plugins/moment.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('public/admin/js/plugins/sweetalert2.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('public/admin/js/plugins/jquery.validate.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('public/admin/js/plugins/jquery.bootstrap-wizard.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('public/admin/js/plugins/bootstrap-selectpicker.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('public/admin/js/plugins/bootstrap-datetimepicker.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('public/admin/js/plugins/jquery.dataTables.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('public/admin/js/plugins/bootstrap-tagsinput.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('public/admin/js/plugins/jasny-bootstrap.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('public/admin/js/plugins/fullcalendar.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('public/admin/js/plugins/jquery-jvectormap.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('public/admin/js/plugins/nouislider.min.js') }}"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
-  <script type="text/javascript" src="{{ asset('admin/js/plugins/arrive.min.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('admin/js/plugins/chartist.min.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('admin/js/plugins/bootstrap-notify.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('admin/js/material-dashboard.js?v=2.1.2') }}" ></script>
-  <script type="text/javascript" src="{{ asset('admin/js/material-dashboard.js.map') }}" ></script>
-  <script type="text/javascript" src="{{ asset('admin/demo/demo.js') }}"></script>
-  <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script type="text/javascript" src="{{ asset('public/admin/js/plugins/arrive.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('public/admin/js/plugins/chartist.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('public/admin/js/plugins/bootstrap-notify.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('public/admin/js/material-dashboard.js?v=2.1.2') }}" ></script>
+  <script type="text/javascript" src="{{ asset('public/admin/demo/demo.js') }}"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></sc>
 
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script>

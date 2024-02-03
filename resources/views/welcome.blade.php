@@ -6,50 +6,22 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
         <title>Wellness & Spa App | Spoil Yourself</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('frontend/images/apple-touch-icon.png') }}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('frontend/images/favicon-32x32.png') }}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('frontend/images/favicon-16x16.png') }}">
-        <link rel="manifest" href="/site.webmanifest">
+        <link rel="apple-touch-icon" sizes="180x180" href="frontend/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="frontend/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="frontend/images/favicon-16x16.png">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
-        <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/css/font-awesome.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.css') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/css/owl.theme.css') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/css/animate.css') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/css/flexslider.css') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/css/pricing.css') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/css/main.css') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap-datetimepicker.min.css') }}">
+        <link rel="stylesheet" href="frontend/css/bootstrap.min.css">
+        <link rel="stylesheet" href="frontend/css/font-awesome.min.css">
+        <link rel="stylesheet" href="frontend/css/owl.carousel.css">
+        <link rel="stylesheet" href="frontend/css/owl.theme.css">
+        <link rel="stylesheet" href="frontend/css/animate.css">
+        <link rel="stylesheet" href="frontend/css/flexslider.css">
+        <link rel="stylesheet" href="frontend/css/pricing.css">
+        <link rel="stylesheet" href="frontend/css/main.css">
+        <link rel="stylesheet" href="frontend/css/bootstrap-datetimepicker.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-        <style>
-                @foreach($sliders as $key=>$slider)
-                    .owl-carousel .owl-wrapper, .owl-carousel .owl-item:nth-child({{ $key + 1 }}) .item
-                    {
-                        background: url({{ Storage::disk('s3')->url($slider->image)}});
-                        background-size: cover;
-                        @media only screen and (max-width: 320px) {
 
-                        }
-                        @media only screen and (min-width: 1200px) {
-                            /* styles for wide screens */
-                        }
-                        @media only screen and (min-width: 1440px) {
-                            /* styles for MacBook Pro-sized screens and larger */
-                        }
-                        @media
-                        only screen and (-webkit-min-device-pixel-ratio: 2),
-                        only screen and (min--moz-device-pixel-ratio: 2),
-                        only screen and (-moz-min-device-pixel-ratio: 2),
-                        only screen and (-o-min-device-pixel-ratio: 2/1),
-                        only screen and (min-device-pixel-ratio: 2),
-                        only screen and (min-resolution: 192dpi),
-                        only screen and (min-resolution: 2dppx) {
-                            /* styles for Retina-type displays */
-                        }
-
-                @endforeach
-        </style>
     </head>
     <body data-spy="scroll" data-target="#template-navbar">
 
@@ -99,7 +71,7 @@
 
         <!--== 6. About us ==-->
         <section id="about" class="about">
-            <img src="{{  asset('frontend/images/icons/about_color.png') }}" class="img-responsive section-icon hidden-sm hidden-xs">
+            <img src="frontend/images/icons/about_color.png" class="img-responsive section-icon hidden-sm hidden-xs">
             <div class="wrapper">
                 <div class="container-fluid">
                     <div class="row dis-table">
@@ -175,7 +147,7 @@
 
         <!--== 15. Reserve A Tretment! ==-->
         <section id="reserve" class="reserve">
-            <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{ asset('frontend/images/icons/reserve_black.png')}}">
+            <img class="img-responsive section-icon hidden-sm hidden-xs" src="frontend/images/icons/reserve_black.png">
             <div class="wrapper">
                 <div class="container-fluid">
                     <div class="row dis-table justify-content-center">
@@ -193,7 +165,7 @@
 
 
         <section class="reservation">
-            <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{ asset('frontend/images/icons/reserve_color.png')}}">
+            <img class="img-responsive section-icon hidden-sm hidden-xs" src="frontend/images/icons/reserve_color.png">
             <div class="wrapper">
                 <div class="container-fluid">
                     <div class="section-content">
@@ -347,16 +319,16 @@
             </div>
         </footer>
 
-        <script type="text/javascript" src="{{ asset('frontend/js/jquery-1.11.2.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('frontend/js/bootstrap.min.js')}}"></script>
-        <script type="text/javascript" src="{{ asset('frontend/js/owl.carousel.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('frontend/js/jquery.mixitup.min.js') }}" ></script>
-        <script type="text/javascript" src="{{ asset('frontend/js/wow.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('frontend/js/jquery.validate.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('frontend/js/jquery.hoverdir.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('frontend/js/jQuery.scrollSpeed.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('frontend/js/script.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('frontend/js/bootstrap-datetimepicker.min.js') }}"></script>
+        <script type="text/javascript" src="frontend/js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="frontend/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="frontend/js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="frontend/js/jquery.mixitup.min.js" ></script>
+        <script type="text/javascript" src="frontend/js/wow.min.js"></script>
+        <script type="text/javascript" src="frontend/js/jquery.validate.js"></script>
+        <script type="text/javascript" src="frontend/js/jquery.hoverdir.js"></script>
+        <script type="text/javascript" src="frontend/js/jQuery.scrollSpeed.js"></script>
+        <script type="text/javascript" src="frontend/js/script.js"></script>
+        <script type="text/javascript" src="frontend/js/bootstrap-datetimepicker.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
         @if($errors->any())
             @foreach ($errors->all() as $error)
@@ -381,7 +353,7 @@
 
         {!! Toastr::message() !!}
 
-        <script type="text/javascript" src="{{ asset('frontend/js/jquery.flexslider.min.js') }}"></script>
+        <script type="text/javascript" src="frontend/js/jquery.flexslider.min.js"></script>
         <script type="text/javascript">
             $(window).load(function() {
                 $('.flexslider').flexslider({
@@ -391,7 +363,7 @@
             });
         </script>
 
-        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key="></script>
         <script>
             function initialize() {
                 var mapCanvas = document.getElementById('map-canvas');
