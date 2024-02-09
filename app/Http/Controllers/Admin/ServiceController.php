@@ -53,11 +53,11 @@ class ServiceController extends Controller
             'image' => 'required|mimes:jpeg,bmp,png',
         ]);
         $image = $request->file('image');
-         $filename = $image->getClientOriginalName();
-         $filename = time(). '.' . $filename;
-         $path =  'upload/service/'.$filename;
-         $storage = Storage::disk('s3');
-         $storage->put($path, fopen($image,  'r+'), 'public');
+        $filename = $image->getClientOriginalName();
+        $filename = time(). '.' . $filename;
+        $path =  'upload/service/'.$filename;
+        $storage = Storage::disk('s3');
+        $storage->put($path, fopen($image,  'r+'), 'public');
 
         $service = new Service();
         $service->category_id = $request->category_id;
@@ -117,6 +117,7 @@ class ServiceController extends Controller
         $filename = $image->getClientOriginalName();
         $filename = time(). '.' . $filename;
         $path =  'upload/service/'.$filename;
+        var_dump(Storage::disk('s3')); 
         $storage = Storage::disk('s3');
         $storage->put($path, fopen($image,  'r+'), 'public');
 

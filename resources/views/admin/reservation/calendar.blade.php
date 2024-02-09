@@ -3,11 +3,11 @@
 @section('title','Calendar')
 
 @push('css')
-<link rel="stylesheet" href="{{ secure_asset('admin/css/calendar.css') }}">
-<link rel="stylesheet" href="{{ secure_asset('admin/css/fullcalendar.css') }}">
+<link rel="stylesheet" href="{{ url('../admin/css/calendar.css') }}">
+<link rel="stylesheet" href="{{ url('../admin/css/fullcalendar.css') }}">
 <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.css" />
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="{{ secure_asset('admin/css/jquery.datetimepicker.min.css') }}">
+<link rel="stylesheet" href="{{ url ('../admin/css/jquery.datetimepicker.min.css') }}">
 @endpush
 
 @section('content')
@@ -208,13 +208,13 @@
 
 });
 </script>
-    <script type="text/javascript" src="{{ secure_asset('frontend/js/bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url('../frontend/js/bootstrap.min.js') }}"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.js'></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script type="text/javascript" src="{{ secure_asset('admin/js/jquery.datetimepicker.full.js') }}"></script>
-    <script type="text/javascript" src="{{ secure_asset('admin/js/jquery.datetimepicker.full.min.js') }}"></script>
-    <script type="text/javascript" src="{{ secure_asset('admin/js/jquery.datetimepicker.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url('../admin/js/jquery.datetimepicker.full.js') }}"></script>
+    <script type="text/javascript" src="{{ url('../admin/js/jquery.datetimepicker.full.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url('../admin/js/jquery.datetimepicker.min.js') }}"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     @if($errors->any())
         @foreach ($errors->all() as $error)
