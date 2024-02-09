@@ -117,7 +117,6 @@ class ServiceController extends Controller
         $filename = $image->getClientOriginalName();
         $filename = time(). '.' . $filename;
         $path =  'upload/service/'.$filename;
-        var_dump(Storage::disk('s3')); 
         $storage = Storage::disk('s3');
         $storage->put($path, fopen($image,  'r+'), 'public');
 

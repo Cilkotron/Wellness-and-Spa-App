@@ -1,7 +1,7 @@
 {
-    "name": "Spa App",
+    "name": "laravel/laravel",
     "type": "project",
-    "description": "Spa portal, gives you an oportunity to preview & schedule spa tretment",
+    "description": "The Laravel Framework.",
     "keywords": [
         "framework",
         "laravel"
