@@ -6,20 +6,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
         <title>Wellness & Spa App | Spoil Yourself</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="frontend/images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="frontend/images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="frontend/images/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ url('../frontend/images/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url('../frontend/images/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ url('../frontend/images/favicon-16x16.png') }}">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
-        <link rel="stylesheet" href="frontend/css/bootstrap.min.css">
-        <link rel="stylesheet" href="frontend/css/font-awesome.min.css">
-        <link rel="stylesheet" href="frontend/css/owl.carousel.css">
-        <link rel="stylesheet" href="frontend/css/owl.theme.css">
-        <link rel="stylesheet" href="frontend/css/animate.css">
-        <link rel="stylesheet" href="frontend/css/flexslider.css">
-        <link rel="stylesheet" href="frontend/css/pricing.css">
-        <link rel="stylesheet" href="frontend/css/main.css">
-        <link rel="stylesheet" href="frontend/css/bootstrap-datetimepicker.min.css">
+        <link rel="stylesheet" href="{{ url('../frontend/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url('../frontend/css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ url('../frontend/css/owl.carousel.css') }}">
+        <link rel="stylesheet" href="{{ url('../frontend/css/owl.theme.css') }}">
+        <link rel="stylesheet" href="{{ url('../frontend/css/animate.css') }}">
+        <link rel="stylesheet" href="{{ url('../frontend/css/flexslider.css') }}">
+        <link rel="stylesheet" href="{{ url('../frontend/css/pricing.css') }}">
+        <link rel="stylesheet" href="{{ url('../frontend/css/main.css') }}">
+        <link rel="stylesheet" href="{{ url('../frontend/css/bootstrap-datetimepicker.min.css') }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
     </head>
@@ -319,16 +319,16 @@
             </div>
         </footer>
 
-        <script type="text/javascript" src="frontend/js/jquery-1.11.2.min.js"></script>
-        <script type="text/javascript" src="frontend/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="frontend/js/owl.carousel.min.js"></script>
-        <script type="text/javascript" src="frontend/js/jquery.mixitup.min.js" ></script>
-        <script type="text/javascript" src="frontend/js/wow.min.js"></script>
-        <script type="text/javascript" src="frontend/js/jquery.validate.js"></script>
-        <script type="text/javascript" src="frontend/js/jquery.hoverdir.js"></script>
-        <script type="text/javascript" src="frontend/js/jQuery.scrollSpeed.js"></script>
-        <script type="text/javascript" src="frontend/js/script.js"></script>
-        <script type="text/javascript" src="frontend/js/bootstrap-datetimepicker.min.js"></script>
+        <script type="text/javascript" src="{{ url('../frontend/js/jquery-1.11.2.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url('../frontend/js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url('../frontend/js/owl.carousel.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url('../frontend/js/jquery.mixitup.min.js') }}" ></script>
+        <script type="text/javascript" src="{{ url('../frontend/js/wow.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url('../frontend/js/jquery.validate.js') }}"></script>
+        <script type="text/javascript" src="{{ url('../frontend/js/jquery.hoverdir.js') }}"></script>
+        <script type="text/javascript" src="{{ url('../frontend/js/jQuery.scrollSpeed.js') }}"></script>
+        <script type="text/javascript" src="{{ url('../frontend/js/script.js') }}"></script>
+        <script type="text/javascript" src="{{ url('../frontend/js/bootstrap-datetimepicker.min.js') }}"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
         @if($errors->any())
             @foreach ($errors->all() as $error)
@@ -363,7 +363,7 @@
             });
         </script>
 
-        <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_MAPS_KEY')}}"></script>
         <script>
             function initialize() {
                 var mapCanvas = document.getElementById('map-canvas');
